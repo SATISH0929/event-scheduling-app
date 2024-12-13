@@ -6,20 +6,31 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: start;
   background-color: rgb(139, 144, 196);
   padding-top: 20px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgb(139, 144, 196);
+    padding-top: 15px;
+  }
+}
 .formCont {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  align-self: center;
   background-image: linear-gradient(lightblue, lightgreen);
   padding: 20px;
-  width: 300px;
+  min-width: 250px;
   border-radius: 10px;
 }
 
@@ -37,4 +48,33 @@
   padding: 5px 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: transparent;
+}
+
+.event-list-head {
+  color: lightgreen;
+  font-family: system-ui;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .event-list-head {
+    color: lightgreen;
+    font-family: system-ui;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.eventsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eventItem {
+  background-image: linear-gradient(lightblue, lightgreen);
+  font-size: 15px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 15px;
+  margin-top: 10px;
 }
